@@ -8,3 +8,37 @@
     height: 35px;
     width: 35px;
 }
+.main {
+    margin-top: 3em;
+}
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.btn-crud {
+    text-align: center;
+}
+.form-crud {
+    display: none;
+}
+.title {
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+
+.group-action {
+    display: flex;
+    flex-direction: row;
+}
+.btn-edit, .btn-detail {
+    margin: 1px;
+}
+#table {
+    overflow-x: scroll;
+}
+.pagination-wrap {
+    text-align: center;
+}
+.form-search{
+    width: 100%;
+}
