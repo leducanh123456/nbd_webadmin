@@ -1,0 +1,10 @@
+.brand-link .brand-image{
+	width: 35px;
+    height: 35px;
+    max-height: 35px;
+    max-width: 35px;
+}
+.user-panel img {
+    height: 35px;
+    width: 35px;
+}
