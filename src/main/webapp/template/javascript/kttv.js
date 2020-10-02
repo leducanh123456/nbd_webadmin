@@ -45,3 +45,113 @@ function neoAjaxCallBack(obj, done, fail) {
 		}
 	});
 }
+$('#btnCreate').on('click', function(e){
+	e.stopPropagation();
+	e.preventDefault();
+
+	$('.form-search').css('display', 'none');
+	$('.form-crud').css('display', 'block');
+
+	$('#btnCreate').css('display', 'none');
+	$('#btnRemoveRecord').css('display', 'none');
+	$('#btnSearch').css('display', 'none');
+
+	$('#btnSaveCreate').css('display', '');
+	$('#btnBackCreate').css('display', '');
+})
+
+$('#btnSaveCreate').on('click', function(e){
+	e.stopPropagation();
+	e.preventDefault();
+
+	$('.form-search').css('display', 'block');
+	$('.form-crud').css('display', 'none');
+
+	$('#btnCreate').css('display', '');
+	$('#btnRemoveRecord').css('display', '');
+	$('#btnSearch').css('display', '');
+
+	$('#btnSaveCreate').css('display', 'none');
+	$('#btnBackCreate').css('display', 'none');
+
+	toastr["success"]("Are you the six fingered man?")
+})
+
+$('#btnBackCreate').on('click', function(e){
+	e.stopPropagation();
+	e.preventDefault();
+
+	$('.form-search').css('display', 'block');
+	$('.form-crud').css('display', 'none');
+
+	$('#btnCreate').css('display', '');
+	$('#btnRemoveRecord').css('display', '');
+	$('#btnSearch').css('display', '');
+
+	$('#btnSaveCreate').css('display', 'none');
+	$('#btnBackCreate').css('display', 'none');
+})
+
+$('#btnRemoveRecord').on('click', function(e){
+	confirm('Bạn có muốn xoá bản ghi này ?');
+	toastr["success"]("Are you the six fingered man?")
+})
+
+function fillDataToFormEdit() {
+
+}
+
+function editData() {
+	fillDataToFormEdit();
+	$('.form-search').css('display', 'none');
+	$('.form-crud').css('display', 'block');
+
+	$('#btnCreate').css('display', 'none');
+	$('#btnRemoveRecord').css('display', 'none');
+	$('#btnSearch').css('display', 'none');
+
+	$('#btnSaveEdit').css('display', '');
+	$('#btnBackEdit').css('display', '');
+
+	$('#titleFormCrud').text('Chỉnh sửa: Nội dung');
+}
+
+$('#btnSaveEdit').on('click', function(e){
+	e.stopPropagation();
+	e.preventDefault();
+
+	$('.form-search').css('display', 'block');
+	$('.form-crud').css('display', 'none');
+
+	$('#btnCreate').css('display', '');
+	$('#btnRemoveRecord').css('display', '');
+	$('#btnSearch').css('display', '');
+
+	$('#btnSaveEdit').css('display', 'none');
+	$('#btnBackEdit').css('display', 'none');
+
+	toastr["success"]("Are you the six fingered man?");
+
+	$('#titleFormCrud').text('Thêm mới: Nội dung');
+});
+
+$('#btnBackEdit').on('click', function(e){
+	e.stopPropagation();
+	e.preventDefault();
+
+	$('.form-search').css('display', 'block');
+	$('.form-crud').css('display', 'none');
+
+	$('#btnCreate').css('display', '');
+	$('#btnRemoveRecord').css('display', '');
+	$('#btnSearch').css('display', '');
+
+	$('#btnSaveEdit').css('display', 'none');
+	$('#btnBackEdit').css('display', 'none');
+
+	$('#titleFormCrud').text('Thêm mới: Nội dung');
+})
+
+function detailData() {
+
+}
