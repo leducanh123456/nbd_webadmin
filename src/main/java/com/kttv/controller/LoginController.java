@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class LoginController {
-	@RequestMapping(value = { "/login" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/{locale:en|fr|vi}/login" }, method = RequestMethod.GET)
     public String index() {
         return "loginPage";
     }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>  
+<?xml version="1.0" encoding="UTF-8"?> 
 <!DOCTYPE tiles-definitions PUBLIC  
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
@@ -25,7 +25,7 @@
 	</definition>
 	<!--login -->
 	<definition name="loginPage" template="/WEB-INF/layouts/login.jsp">
-		<put-attribute name="title" value="Đăng nhập" />
+		<put-attribute name="title" value="Log in" />
 	</definition>
 	<!-- 404 Page -->
 	<definition name="404" extends="base.definition">

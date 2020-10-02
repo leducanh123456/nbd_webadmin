@@ -2,12 +2,25 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<c:if test="${sessionScope.URL_LOCALE_ATTRIBUTE_NAME eq en}">
+	<fmt:setLocale value="${sessionScope.URL_LOCALE_ATTRIBUTE_NAME}}" />
+	<fmt:setBundle basename="i18n/messages_en" />
+</c:if>
+<c:if test="${sessionScope.URL_LOCALE_ATTRIBUTE_NAME eq fr}">
+	<fmt:setLocale value="${sessionScope.URL_LOCALE_ATTRIBUTE_NAME}}" />
+	<fmt:setBundle basename="i18n/messages_fr" />
+</c:if>
+<c:if test="${sessionScope.URL_LOCALE_ATTRIBUTE_NAME eq vi}">
+	<fmt:setLocale value="${sessionScope.URL_LOCALE_ATTRIBUTE_NAME}}" />
+	<fmt:setBundle basename="i18n/messages_vi" />
+</c:if>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Kttv</title>
+<title><tiles:getAsString name="title" /></title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -30,7 +43,9 @@
 <body class="hold-transition login-page">
 	<div class="login-box">
 		<div class="login-logo">
-			<a href="../../index2.html"><b>Trung tâm khí tượng thủy văn</b></a>
+			<!-- <a href="../../index2.html"><b>Trung tâm khí tượng thủy văn</b></a> -->
+			<a href="../../index2.html"> <b><fmt:message
+						key="label.password" /></b></a>
 		</div>
 		<!-- /.login-logo -->
 		<div class="card">
